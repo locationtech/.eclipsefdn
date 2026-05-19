@@ -1,11 +1,11 @@
-site_name: Otterdog configuration @ {{ org }}
-site_description: Otterdog configuration @ {{ org }}
+site_name: Otterdog configuration @ locationtech
+site_description: Otterdog configuration @ locationtech
 strict: false
 
-site_url: https://{{ org }}.github.io/.eclipsefdn/
+site_url: https://locationtech.github.io/.eclipsefdn/
 
-repo_name: {{ org }}/.eclipsefdn
-repo_url: https://github.com/{{ org }}/.eclipsefdn/
+repo_name: locationtech/.eclipsefdn
+repo_url: https://github.com/locationtech/.eclipsefdn/
 
 docs_dir: ./docs
 site_dir: ./_site
@@ -34,7 +34,7 @@ nav:
 watch: []
 
 extra:
-  org_id: {{ org }}
+  org_id: locationtech
 
 extra_css:
   - stylesheets/extra.css
