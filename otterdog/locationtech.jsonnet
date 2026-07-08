@@ -88,38 +88,32 @@ orgs.newOrg('locationtech', 'locationtech') {
       ],
     },
     orgs.newRepo('geomesa') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
       allow_update_branch: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
       delete_branch_on_merge: false,
       description: "GeoMesa is a suite of tools for working with big geo-spatial data in a distributed fashion.",
-      has_issues: false,
+      has_discussions: true,
+      has_issues: true,
+      has_projects: false,
       has_wiki: false,
       homepage: "https://www.geomesa.org/",
-      secret_scanning: "disabled",
+      members_can_delete_issues: true,
+      private_vulnerability_reporting_enabled: true,
+      secret_scanning: "enabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
-        default_workflow_permissions: "write",
+        default_workflow_permissions: "read",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://geomesa.atlassian.net/rest/bitbucket/1.0/repository/2/sync') {
-          events+: [
-            "push"
-          ],
-        },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
+      webhooks: [],
       secrets: [
         orgs.newRepoSecret('REPO_TOKEN_PASSWORD') {
           value: "********",
