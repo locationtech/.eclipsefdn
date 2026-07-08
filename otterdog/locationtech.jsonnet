@@ -19,46 +19,6 @@ orgs.newOrg('locationtech', 'locationtech') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('.eclipsefdn') {
-      orgs.newRepoRuleset('<name>') {
-        'allows_creations'                 : false,
-        'allows_deletions'                 : false,
-        'allows_force_pushes'              : false,
-        'allows_updates'                   : true,
-        'bypass_actors'                    : [
-          "#OrganizationAdmin",
-          "@locationtech/eclipsefdn-releng",
-          "@locationtech/eclipsefdn-security"
-        ],
-        'enforcement'                      : "active",
-        'exclude_refs'                     : [],
-        'include_refs'                     : [
-          "~DEFAULT_BRANCH"
-        ],
-        'name'                             : "main",
-        'required_deployment_environments' : [],
-        'required_merge_queue'             : null,
-        'required_pull_request'            : {
-          'dismisses_stale_reviews'           : true,
-          'required_approving_review_count'   : 0,
-          'requires_code_owner_review'        : true,
-          'requires_last_push_approval'       : true,
-          'requires_review_thread_resolution' : false
-        },
-        'required_status_checks'           : {
-          'do_not_enforce_on_create' : false,
-          'status_checks'            : [
-            "eclipse-otterdog:eclipsefdn/otterdog-sync",
-            "eclipse-otterdog:eclipsefdn/otterdog-validation"
-          ],
-          'strict'                   : true
-        },
-        'requires_commit_signatures'       : false,
-        'requires_deployments'             : false,
-        'requires_linear_history'          : false,
-        'target'                           : "branch"
-      }
-    },
     orgs.newRepo('geoff') {
       allow_merge_commit: true,
       allow_update_branch: false,
