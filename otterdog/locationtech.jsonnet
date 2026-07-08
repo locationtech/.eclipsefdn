@@ -105,7 +105,6 @@ orgs.newOrg('locationtech', 'locationtech') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://www.geomesa.org/",
-      members_can_delete_issues: true,
       private_vulnerability_reporting_enabled: true,
       secret_scanning: "enabled",
       secret_scanning_push_protection: "disabled",
