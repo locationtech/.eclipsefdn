@@ -102,7 +102,7 @@ orgs.newOrg('locationtech', 'locationtech') {
       description: "GeoMesa is a suite of tools for working with big geo-spatial data in a distributed fashion.",
       has_discussions: true,
       has_issues: true,
-      has_projects: false,
+      has_projects: true,
       has_wiki: false,
       homepage: "https://www.geomesa.org/",
       private_vulnerability_reporting_enabled: true,
