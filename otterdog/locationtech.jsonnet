@@ -225,7 +225,6 @@ orgs.newOrg('locationtech', 'locationtech') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
       description: "GeoWave provides geospatial and temporal indexing on top of Accumulo, HBase, BigTable, Cassandra, Kudu, Redis, RocksDB, and DynamoDB.",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
