@@ -102,6 +102,7 @@ orgs.newOrg('locationtech', 'locationtech') {
       code_scanning_default_query_suite: "default",
       code_scanning_default_languages: [ "actions", "java-kotlin" ],
       delete_branch_on_merge: false,
+      dependabot_alerts_enabled: true,
       description: "GeoMesa is a suite of tools for working with big geo-spatial data in a distributed fashion.",
       has_discussions: true,
       has_issues: true,
