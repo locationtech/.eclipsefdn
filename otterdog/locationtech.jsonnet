@@ -276,6 +276,9 @@ orgs.newOrg('locationtech', 'locationtech') {
         },
       ],
       secrets: [
+        orgs.newRepoSecret('DASH_IPLAB_TOKEN') {
+          value: "********",
+        },
         orgs.newRepoSecret('CACHE_ID') {
           value: "********",
         },
@@ -300,6 +303,21 @@ orgs.newOrg('locationtech', 'locationtech') {
         orgs.newRepoSecret('SONATYPE_USERNAME') {
           value: "********",
         },
+        orgs.newRepoSecret('GPG_KEY_ID') {
+          value: "pass:bots/locationtech.geowave/gpg/key_id",
+        },
+        orgs.newRepoSecret('GPG_PASSPHRASE_NEW') {
+          value: "pass:bots/locationtech.geowave/gpg/passphrase",
+        },
+        orgs.newRepoSecret('GPG_PRIVATE_KEY') {
+          value: "pass:bots/locationtech.geowave/gpg/secret-subkeys.asc",
+        },
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+          value: "pass:bots/locationtech.geowave/central.sonatype.org/token-password",
+        },
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+          value: "pass:bots/locationtech.geowave/central.sonatype.org/token-username",
+        }
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
@@ -311,6 +329,9 @@ orgs.newOrg('locationtech', 'locationtech') {
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('eclipse-ip') {
+          deployment_branch_policy: "all",
+        },
       ],
     },
     orgs.newRepo('jts') {
