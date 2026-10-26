@@ -229,12 +229,13 @@ orgs.newOrg('locationtech', 'locationtech') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      description: "GeoWave provides geospatial and temporal indexing on top of Accumulo, HBase, BigTable, Cassandra, Kudu, Redis, RocksDB, and DynamoDB.",
+      description: "GeoWave provides geospatial and temporal indexing on top of Accumulo, HBase, Cassandra, DynamoDB, Redis, RocksDB, and the filesystem.",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_projects: false,
-      homepage: "",
+      homepage: "https://locationtech.github.io/geowave/",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -246,7 +247,6 @@ orgs.newOrg('locationtech', 'locationtech') {
         "geowave",
         "hbase",
         "java",
-        "kudu",
         "redis",
         "rocksdb",
         "spatiotemporal"
