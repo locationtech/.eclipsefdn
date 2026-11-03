@@ -285,22 +285,7 @@ orgs.newOrg('locationtech', 'locationtech') {
         orgs.newRepoSecret('CHANGELOG_TOKEN') {
           value: "********",
         },
-        orgs.newRepoSecret('GPG_OWNERTRUST') {
-          value: "********",
-        },
-        orgs.newRepoSecret('GPG_PASSPHRASE') {
-          value: "********",
-        },
-        orgs.newRepoSecret('GPG_SECRET_KEYS') {
-          value: "********",
-        },
         orgs.newRepoSecret('PYPI_CREDENTIALS') {
-          value: "********",
-        },
-        orgs.newRepoSecret('SONATYPE_PASSWORD') {
-          value: "********",
-        },
-        orgs.newRepoSecret('SONATYPE_USERNAME') {
           value: "********",
         },
         orgs.newRepoSecret('GPG_KEY_ID') {
